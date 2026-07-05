@@ -1,0 +1,6 @@
+@DistributedCommunicationBenchmark_HostAddress = http://localhost:5163
+
+GET {{DistributedCommunicationBenchmark_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

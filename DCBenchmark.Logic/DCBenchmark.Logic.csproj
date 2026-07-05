@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DCBenchmark.Infrastructure\DCBenchmark.Infrastructure.csproj" />
+    <ProjectReference Include="..\DistributedCommunicationBenchmark.Application\DCBenchmark.Application.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DCBenchmark.Infrastructure/DCBenchmark.Infrastructure.csproj" Id="011b40be-d91c-4ca3-8d30-831787c4ba35" />
+  <Project Path="DCBenchmark.Logic/DCBenchmark.Logic.csproj" Id="5b3dc7bf-5446-43c2-8ae8-d0ad74c9dbfe" />
+  <Project Path="DistributedCommunicationBenchmark.Application/DCBenchmark.Application.csproj" Id="73cfd1ba-a8ea-4524-9584-5f2c55f96f7e" />
+  <Project Path="DistributedCommunicationBenchmark/DistributedCommunicationBenchmark.Web.csproj" />
+</Solution>
