@@ -1,21 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="HotChocolate.AspNetCore" Version="16.5.0" />
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Grpc.AspNetCore" Version="2.80.0" />
+		<PackageReference Include="HotChocolate.AspNetCore" Version="16.5.0" />
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DCBenchmark.Infrastructure\DCBenchmark.Infrastructure.csproj" />
-    <ProjectReference Include="..\DCBenchmark.Logic\DCBenchmark.Logic.csproj" />
-    <ProjectReference Include="..\DistributedCommunicationBenchmark.Application\DCBenchmark.Application.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DCBenchmark.Infrastructure\DCBenchmark.Infrastructure.csproj" />
+		<ProjectReference Include="..\DCBenchmark.Logic\DCBenchmark.Logic.csproj" />
+		<ProjectReference Include="..\DistributedCommunicationBenchmark.Application\DCBenchmark.Application.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Grpc\product.proto" GrpcServices="Server" />
+	</ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 using DCBenchmark.Infrastructure;
 using DistributedCommunicationBenchmark.Web.GraphQL;
+using DistributedCommunicationBenchmark.Web.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
@@ -13,6 +14,8 @@ DIRegistration.AddInfrastructure(builder.Services, seederDataCount: 10_000);
 builder.Services.AddGraphQLServer()
     .AddQueryType<Queries>()
     .AddMutationType<Mutations>();
+
+builder.Services.AddGrpc();
 
 var app = builder.Build();
 
@@ -28,5 +31,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.MapGraphQL();
+app.MapGrpcService<ProductGrpcService>();
 
 await app.RunAsync();
